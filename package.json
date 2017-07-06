@@ -1,0 +1,39 @@
+{
+  "name": "promis-server",
+  "author": "Sebastian Quack, Holger Heissmeyer",
+  "homepage": "http://promis.me",
+  "private": true,
+  "scripts": {
+    "meteor-client:bundle": "meteor-client bundle -s api --url https://cryptic-beach-81693.herokuapp.com"
+  },
+  "dependencies": {
+    "@ionic/storage": "1.1.7",
+    "@types/leaflet": "^1.0.54",
+    "aws-sdk": "^2.13.0",
+    "babel-runtime": "^6.22.0",
+    "font-awesome": "^4.7.0",
+    "geolib": "^2.0.22",
+    "ionic-native": "2.4.1",
+    "leaflet": "^1.1.0",
+    "leaflet.markercluster": "^1.0.6",
+    "leaflet.offline": "git+https://github.com/allartk/leaflet.offline.git#v0.1.0-beta.5",
+    "localforage": "^1.4.3",
+    "meteor-node-stubs": "^0.2.5",
+    "meteor-rxjs": "^0.4.6",
+    "rxjs": "5.0.x",
+    "sw-toolbox": "3.4.0",
+    "zone.js": "0.6.26"
+  },
+  "devDependencies": {
+    "@types/meteor": "1.3.31",
+    "@types/node": "^7.0.5",
+    "@types/underscore": "^1.7.36",
+    "meteor-typings": "^1.3.1",
+    "tmp": "0.0.31",
+    "typescript": "2.1.5",
+    "typescript-extends": "^1.0.1"
+  },
+  "description": "Promis meteor server",
+  "config": {
+  }
+}

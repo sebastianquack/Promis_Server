@@ -1,0 +1,43 @@
+<template name="admin">
+	<div class="admin">
+		<h1>Promis admin</h1>
+	  	<h2>static pages</h2>
+		<form id="static-content">
+			<textarea name="how_to_play_content">{{settings.how_to_play_content}}</textarea><br>
+			<textarea name="about_content">{{settings.about_content}}</textarea><br>
+			<textarea name="make_promis_content">{{settings.make_promis_content}}</textarea><br>
+			<input type="submit" value="update">
+		</form>
+		<h2>remote videos</h2>
+		<video id="player" controls></video>
+		<ul>
+			{{#each remoteVideos}}
+				{{> videoItem}}
+			{{/each}}
+		</ul>
+		<h2>users</h2>
+		<ul>
+			{{#each users}}
+				<li><b>{{username}}</b> {{email}} {{deviceUuid}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</template>
+
+<template name="videoItem">
+	<li class="videoItem {{flaggedClass}}">
+		<img class="video-thumb" src="{{thumbUrl}}"><br>
+		<b>{{title}}</b> by {{user}}<br>
+		size: {{size}} duration: {{duration}} branch: {{branch}} hidden: {{hidden}} flagged: {{flagged}}<br>
+		<a href="#" class="show">play video</a>
+		<a href="#" class="hide">toggle hidden</a>
+		<a href="#" class="flag">toggle flag</a>
+		<a href="#" class="delete">delete</a>
+		<form>
+			lat: <input name="lat" type="text" value="{{start_geoposition.coords.latitude}}">
+			lon: <input name="lon" type="text" value="{{start_geoposition.coords.longitude}}">
+			<input type="submit" value="update">
+		</form>
+	</li>
+</template>
+
