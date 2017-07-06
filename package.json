@@ -4,7 +4,6 @@
   "homepage": "http://promis.me",
   "private": true,
   "scripts": {
-    "meteor-client:bundle": "meteor-client bundle -s api --url https://cryptic-beach-81693.herokuapp.com"
   },
   "dependencies": {
     "@ionic/storage": "1.1.7",
